@@ -14,6 +14,8 @@ cv2.imshow('resized', resized)
 
 cv2.waitKey(0)
 
-
-
+# 最近领域插值
+# 双线性插值
+# 像素关系重采样
+# 立方插值
 
