@@ -25,7 +25,7 @@ for i in range(4, height - 4):
                 p1 = int(gray[i + m, j + n] / 32)  # 计算出每个点对应的等级
                 array1[p1] = array1[p1] + 1  # 统计所有等级的数量
 
-        # 找出最大的等级
+        # 找出数量最多的等级
         currentMax = array1[0]
         l = 0
         for k in range(0, 8):
@@ -33,7 +33,7 @@ for i in range(4, height - 4):
                 currentMax = array1[k]
                 l = k
 
-        # 简化 均值
+        # 简化 均值（使用等级中数量最多的像素作为目标像素）
         for m in range(-4, 4):
             for n in range(-4, 4):
                 if gray[i + m, j + n] >= (l * 32) and gray[i + m, j + n] <= ((l + 1) * 32):
