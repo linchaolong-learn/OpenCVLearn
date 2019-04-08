@@ -21,8 +21,9 @@ for i in range(0, height):
 for i in range(0, 255):
     count[i] = count[i] / (height * width)  # 计算该颜色值在图片中的占比
 
-x = np.linspace(0, 255, 256)
-y = count
+x = np.linspace(0, 255, 256)  # x轴，0-255 平分为256份
+y = count  # y轴，每个颜色值的占比
+
 plt.bar(x, y, 0.9, alpha=1, color='b')
 plt.show()
 cv2.waitKey(0)
